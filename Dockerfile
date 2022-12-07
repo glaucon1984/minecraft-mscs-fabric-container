@@ -1,13 +1,12 @@
 # MinecraftServerControl
 #
 # This Dockerfile creates a Docker image for running running and controlling
-# Minecraft servers. It is based off of gliderlabs alpine image and the
-# MinecraftServerControl script.
+# Minecraft servers. It is based on the alpine image and the MSCS script.
 FROM alpine
 
 # Change this to true or pass --build-arg EULA=true into the docker build call
 # to accept Mojang's EULA.
-ARG EULA=true
+ARG EULA=false
 
 # The default world name. You can mount a volume into ${LOCATIONN}/worlds
 # to load already existing worlds into new instances of this image.
